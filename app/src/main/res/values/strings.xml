@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AskiT!</string>
+    <string name="hello">This will help you to change the font size</string>
+    <string name="lnm">Here you will be able to get your results</string>
+</resources>

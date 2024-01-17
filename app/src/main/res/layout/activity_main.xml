@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/aass"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/enter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#191B19"
+        android:hint="Enter here"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#0E0E0E"
+        android:textColorHint="#0B0B0B"
+        android:textColorLink="#100F0F"
+        android:textSize="20sp"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Switch
+        android:id="@+id/dkmode"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="5dp"
+        android:background="#FFEB3B"
+        android:gravity="start"
+        android:padding="10dp"
+        android:text="Darkmode"
+        android:textColor="#0B0A0A"
+        android:textSize="16sp"
+        android:thumb="@drawable/thb"
+        android:track="@drawable/trac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/clearall"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="ASK IT"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/clearall"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#03A9F4"
+        android:text="CLEAR ALL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dkmode"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#FF9800"
+        android:text="STOP READING"
+        app:layout_constraintBottom_toTopOf="@+id/seek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/read" />
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#4CAF50"
+        android:text="READ"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/stop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/sview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:fillViewport="true"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/read"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter">
+
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="If you are unable to get your results for the first time, just close the app and open it again..it'll work fine."
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#020202"
+            android:textColorLink="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal|bold|italic"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/read"
+            app:layout_constraintTop_toBottomOf="@+id/enter" />
+
+
+    </ScrollView>
+
+    <SeekBar
+        android:id="@+id/seek"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:background="#9C27B0"
+        android:backgroundTint="#3F51B5"
+        android:contentDescription="@string/hello"
+        android:max="30"
+        android:min="20"
+        android:progress="18"
+        android:progressBackgroundTint="#CA1E1E"
+        android:thumbTint="#F40556"
+        app:layout_constraintBottom_toTopOf="@+id/dkmode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="6dp"
+        android:background="#E91E63"
+        android:backgroundTint="#E91E63"
+        android:gravity="center"
+        android:text="Fontsize:"
+        android:textColor="#F6EEEE"
+        android:textColorHighlight="#FF5722"
+        android:textColorHint="#2196F3"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/dkmode"
+        app:layout_constraintEnd_toStartOf="@+id/seek"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
